@@ -1,0 +1,16 @@
+TOPIC
+    about_pSynology
+
+SHORT DESCRIPTION
+    pSynology is a PowerShell interface for the Synology API.
+
+LONG DESCRIPTION
+    
+
+EXAMPLES
+
+KEYWORDS
+    Synology
+
+SEE ALSO
+    https://github.com/pspete/pSynology
