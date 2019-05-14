@@ -59,7 +59,8 @@
 	# Functions to export from this module
 	FunctionsToExport    = @(
 		'New-Session',
-		'Close-Session'
+		'Close-Session',
+		'Get-FSInfo'
 	)
 
 	# AliasesToExport   = @()
