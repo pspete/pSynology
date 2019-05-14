@@ -57,7 +57,10 @@
 	# FormatsToProcess  = @()
 
 	# Functions to export from this module
-	FunctionsToExport    = @()
+	FunctionsToExport    = @(
+		'New-Session',
+		'Close-Session'
+	)
 
 	# AliasesToExport   = @()
 
