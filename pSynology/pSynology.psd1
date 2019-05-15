@@ -75,7 +75,10 @@
 		'Clear-FSFavoriteStatus',
 		'Set-FSFavorite',
 		'Update-FSFavorite',
-		'Get-FSThumbnail'
+		'Get-FSThumbnail',
+		'Start-FSDirSize',
+		'Stop-FSDirSize',
+		'Get-FSDirSize'
 	)
 
 	# AliasesToExport   = @()
