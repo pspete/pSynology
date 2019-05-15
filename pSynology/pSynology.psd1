@@ -71,7 +71,10 @@
 		'Get-FSVirtualFolder',
 		'Get-FSFavorite',
 		'Add-FSFavorite',
-		'Remove-FSFavorite'
+		'Remove-FSFavorite',
+		'Clear-FSFavoriteStatus',
+		'Set-FSFavorite',
+		'Update-FSFavorite'
 	)
 
 	# AliasesToExport   = @()
