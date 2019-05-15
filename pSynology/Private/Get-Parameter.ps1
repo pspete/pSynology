@@ -74,9 +74,9 @@ Hashtable/$PSBoundParameters object, with defined parameters removed.
 			#Get the parameter value
 			$Value = $Parameters[$_]
 
-			if ($_ -eq "additional") {
+			if (($_ -eq "additional") -or ($_ -eq "path")) {
 
-				#if the parameter name is "additional",
+				#if the parameter name is "additional" or "path",
 				#format the array value:
 				#'["comma", "separated", "string", "enclosed", "in", "square", "brackets"]'
 				$Value = '["' + $($Parameters[$_] -join '","') + '"]'

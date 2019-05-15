@@ -60,7 +60,10 @@
 	FunctionsToExport    = @(
 		'New-Session',
 		'Close-Session',
-		'Get-FSInfo'
+		'Get-FSInfo',
+		'Get-FSShare',
+		'Get-FSFile',
+		'Get-FSFileInfo'
 	)
 
 	# AliasesToExport   = @()
