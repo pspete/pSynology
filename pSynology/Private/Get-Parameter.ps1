@@ -78,8 +78,8 @@ Hashtable/$PSBoundParameters object, with defined parameters removed.
 
 				#if the parameter name is "additional",
 				#format the array value:
-				#[comma, separated, string, enclosed, in, square, brackets]
-				$Value = "[$($Parameters[$_] -join ",")]"
+				#'["comma", "separated", "string", "enclosed", "in", "square", "brackets"]'
+				$Value = '["' + $($Parameters[$_] -join '","') + '"]'
 
 			}
 
