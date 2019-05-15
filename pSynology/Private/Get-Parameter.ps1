@@ -71,11 +71,26 @@ Hashtable/$PSBoundParameters object, with defined parameters removed.
 		#Enumerate bound parameters to build query string for URL
 		$Parameters.keys | Where-Object { $UnwantedParameters -notcontains $_ } | ForEach-Object {
 
-			$QueryArgs += "$_=$([System.Uri]::EscapeDataString($Parameters[$_]))"
+			#Get the parameter value
+			$Value = $Parameters[$_]
+
+			if ($_ -eq "additional") {
+
+				#if the parameter name is "additional",
+				#format the array value:
+				#[comma, separated, string, enclosed, in, square, brackets]
+				$Value = "[$($Parameters[$_] -join ",")]"
+
+			}
+
+			#Add parameter=escapedValue to $QueryArgs
+			$QueryArgs += "$_=$([System.Uri]::EscapeDataString($Value))"
+
+
 
 		}
 
-		#Format URL query string
+		#Return URL query string
 		$QueryArgs -join '&'
 
 	}#process
