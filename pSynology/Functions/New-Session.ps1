@@ -72,7 +72,7 @@ function New-Session {
 			$Response = Invoke-Request -Uri $URI -Method GET -SessionVariable $SessionVariable
 
 			If ($Response) {
-				Set-Variable -Name URL -Value $BaseURI -Scope Script -PassThru
+				Set-Variable -Name URL -Value $BaseURI -Scope Script
 			}
 
 		}
