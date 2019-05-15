@@ -18,7 +18,7 @@ function Close-Session {
 			version = "1"
 		}
 
-		$Path = "/webapi/auth.cgi?"
+		$WebAPIPath = "/webapi/auth.cgi?"
 
 	}#begin
 
@@ -27,7 +27,7 @@ function Close-Session {
 		$Parameters = $Parameters + $PSBoundParameters
 
 		#Construct Request URI
-		$URI = $URL + $Path + "$($Parameters | Get-Parameter)"
+		$URI = $URL + $WebAPIPath + "$($Parameters | Get-Parameter)"
 
 		if ($PSCmdlet.ShouldProcess($($Parameters["api"]), "Logout $URL")) {
 
