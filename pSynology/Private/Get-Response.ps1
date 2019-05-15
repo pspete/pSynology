@@ -69,7 +69,11 @@ function Get-Response {
 
 				}
 
-				Default { $webResponse.content }
+				Default {
+
+					#?image/png - Get-FSThumbnail
+					$webResponse.content
+				}
 
 			}
 

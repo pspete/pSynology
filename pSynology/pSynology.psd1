@@ -74,7 +74,8 @@
 		'Remove-FSFavorite',
 		'Clear-FSFavoriteStatus',
 		'Set-FSFavorite',
-		'Update-FSFavorite'
+		'Update-FSFavorite',
+		'Get-FSThumbnail'
 	)
 
 	# AliasesToExport   = @()
