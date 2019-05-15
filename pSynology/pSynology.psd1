@@ -78,7 +78,10 @@
 		'Get-FSThumbnail',
 		'Start-FSDirSize',
 		'Stop-FSDirSize',
-		'Get-FSDirSize'
+		'Get-FSDirSize',
+		'Start-FSMD5',
+		'Stop-FSMD5',
+		'Get-FSMD5'
 	)
 
 	# AliasesToExport   = @()
