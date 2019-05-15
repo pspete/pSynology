@@ -74,7 +74,7 @@ Hashtable/$PSBoundParameters object, with defined parameters removed.
 			#Get the parameter value
 			$Value = $Parameters[$_]
 
-			if (($_ -eq "additional") -or ($_ -eq "path")) {
+			if (($_ -eq "additional") -or ($_ -eq "path") -or ($_ -eq "name")) {
 
 				#if the parameter name is "additional" or "path",
 				#format the array value:
@@ -83,8 +83,10 @@ Hashtable/$PSBoundParameters object, with defined parameters removed.
 
 			}
 
+			$EscapedValue = $([System.Uri]::EscapeDataString($Value))
+
 			#Add parameter=escapedValue to $QueryArgs
-			$QueryArgs += "$_=$([System.Uri]::EscapeDataString($Value))"
+			$QueryArgs += "$_=$EscapedValue"
 
 
 
