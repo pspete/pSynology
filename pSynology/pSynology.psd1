@@ -63,7 +63,11 @@
 		'Get-FSInfo',
 		'Get-FSShare',
 		'Get-FSFile',
-		'Get-FSFileInfo'
+		'Get-FSFileInfo',
+		'Start-FSSearch',
+		'Get-FSSearch',
+		'Stop-FSSearch',
+		'Remove-FSSearch'
 	)
 
 	# AliasesToExport   = @()
