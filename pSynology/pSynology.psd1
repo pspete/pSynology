@@ -68,7 +68,10 @@
 		'Get-FSSearch',
 		'Stop-FSSearch',
 		'Remove-FSSearch',
-		'Get-FSVirtualFolder'
+		'Get-FSVirtualFolder',
+		'Get-FSFavorite',
+		'Add-FSFavorite',
+		'Remove-FSFavorite'
 	)
 
 	# AliasesToExport   = @()
