@@ -78,7 +78,7 @@ Hashtable/$PSBoundParameters object, with defined parameters removed.
 			#Get the parameter value
 			$Value = $Parameters[$_]
 
-			if (($_ -eq "additional") -or ($_ -eq "path") -or ($_ -eq "name") -or ($_ -eq "folder_path")) {
+			if (($_ -eq "additional") -or ($_ -eq "path") -or ($_ -eq "name") -or ($_ -eq "folder_path") -or ($_ -eq "taskid")) {
 
 				if ($CommandOrigin -ne "Test-SYNOFSPermission") {
 
