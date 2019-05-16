@@ -31,7 +31,6 @@ function Update-FSFavorite {
 
 	PROCESS {
 
-		##TODO validate count of path & name (must match)
 		If (($PSBoundParameters["path"].count) -ne $($PSBoundParameters["name"].count)) {
 			Throw "Count of 'path' & 'name' values must be equal"
 		}
