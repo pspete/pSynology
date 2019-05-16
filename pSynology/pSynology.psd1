@@ -97,7 +97,11 @@
 		'Remove-FSItem',
 		'Start-FSDeleteItem',
 		'Stop-FSDeleteItem',
-		'Get-FSDeleteItem'
+		'Get-FSDeleteItem',
+		'Start-FSArchiveExtract',
+		'Stop-FSArchiveExtract',
+		'Get-FSArchiveExtract',
+		'Get-FSArchiveContent'
 		#'Save-FSFile'
 		#'Add-FSFile'
 	)
