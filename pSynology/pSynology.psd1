@@ -101,7 +101,10 @@
 		'Start-FSArchiveExtract',
 		'Stop-FSArchiveExtract',
 		'Get-FSArchiveExtract',
-		'Get-FSArchiveContent'
+		'Get-FSArchiveContent',
+		'Start-FSArchiveCompress',
+		'Stop-FSArchiveCompress',
+		'Get-FSArchiveCompress'
 		#'Save-FSFile'
 		#'Add-FSFile'
 	)
