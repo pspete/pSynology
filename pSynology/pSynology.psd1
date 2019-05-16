@@ -107,8 +107,8 @@
 		'Get-FSArchiveCompress',
 		'Clear-FSBackgroundTask',
 		'Get-FSBackgroundTask',
-		'Save-FSFile'
-		#'Add-FSFile'
+		'Save-FSFile',
+		'Add-FSFile'
 	)
 
 	# AliasesToExport   = @()
