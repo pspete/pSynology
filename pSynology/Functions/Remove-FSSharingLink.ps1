@@ -7,7 +7,7 @@ function Remove-FSSharingLink {
 			Mandatory = $true,
 			ValueFromPipeline = $true
 		)]
-		[string]$id
+		[string[]]$id
 
 	)
 

@@ -7,7 +7,7 @@ function New-FSSharingLink {
 			Mandatory = $true,
 			ValueFromPipeline = $true
 		)]
-		[string]$path,
+		[string[]]$path,
 
 		[Parameter(
 			Mandatory = $true,

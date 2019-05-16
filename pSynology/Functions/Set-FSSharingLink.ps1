@@ -7,7 +7,7 @@ function Set-FSSharingLink {
 			Mandatory = $true,
 			ValueFromPipeline = $true
 		)]
-		[string]$id,
+		[string[]]$id,
 
 		[Parameter(
 			Mandatory = $true,
