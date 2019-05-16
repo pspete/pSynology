@@ -76,7 +76,7 @@ function Get-FSThumbnail {
 				#write it to a file
 				Set-Content @output -ErrorAction Stop
 
-			} catch { throw "Error Saving $path" }
+			} catch { throw "Error Saving $OutputPath" }
 
 		}
 
