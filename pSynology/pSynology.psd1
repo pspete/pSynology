@@ -82,7 +82,15 @@
 		'Start-FSMD5',
 		'Stop-FSMD5',
 		'Get-FSMD5',
-		'Test-FSPermission'
+		'Test-FSPermission',
+		'Set-FSSharingLink',
+		'Remove-FSSharingLink',
+		'Get-FSSharingLink',
+		'New-FSSharingLink',
+		'Get-FSSharingLinkInfo',
+		'Clear-FSSharingLink'
+		#'Save-FSFile'
+		#'Add-FSFile'
 	)
 
 	# AliasesToExport   = @()
