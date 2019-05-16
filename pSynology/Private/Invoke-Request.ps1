@@ -75,7 +75,10 @@ to ensure session persistence.
 			Mandatory = $false,
 			ParameterSetName = "WebSession"
 		)]
-		[Microsoft.PowerShell.Commands.WebRequestSession]$WebSession
+		[Microsoft.PowerShell.Commands.WebRequestSession]$WebSession,
+
+		[Parameter(Mandatory = $false)]
+		[String]$ContentType
 	)
 
 	Begin {
@@ -85,8 +88,11 @@ to ensure session persistence.
 		Write-Debug "Function: $($MyInvocation.InvocationName)"
 		Write-Debug "Invocation Origin: $CommandOrigin"
 
-		#Add ContentType for all function calls
-		$PSBoundParameters.Add("ContentType", 'application/json')
+		If ( -not ($PSBoundParameters.Keys -contains "ContentType")) {
+			#Add ContentType if not specified
+			$PSBoundParameters.Add("ContentType", 'application/json')
+		}
+
 		#$PSBoundParameters.Add("UseBasicParsing", $true)
 
 		#Bypass strict RFC header parsing in PS Core
