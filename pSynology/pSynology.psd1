@@ -106,8 +106,8 @@
 		'Stop-FSArchiveCompress',
 		'Get-FSArchiveCompress',
 		'Clear-FSBackgroundTask',
-		'Get-FSBackgroundTask'
-		#'Save-FSFile'
+		'Get-FSBackgroundTask',
+		'Save-FSFile'
 		#'Add-FSFile'
 	)
 
