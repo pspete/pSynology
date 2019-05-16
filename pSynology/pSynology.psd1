@@ -88,7 +88,8 @@
 		'Get-FSSharingLink',
 		'New-FSSharingLink',
 		'Get-FSSharingLinkInfo',
-		'Clear-FSSharingLink'
+		'Clear-FSSharingLink',
+		'New-FSFolder'
 		#'Save-FSFile'
 		#'Add-FSFile'
 	)
