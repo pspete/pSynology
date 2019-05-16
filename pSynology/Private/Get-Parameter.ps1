@@ -55,6 +55,10 @@ Hashtable/$PSBoundParameters object, with defined parameters removed.
 	BEGIN {
 
 		Write-Debug "Function: $($MyInvocation.InvocationName)"
+
+		#Get the name of the function which invoked this one
+		$CommandOrigin = Get-ParentFunction | Select-Object -ExpandProperty FunctionName
+
 		#Collection of parameters which are to be excluded from the request URL
 		[array]$CommonParameters += [System.Management.Automation.PSCmdlet]::CommonParameters
 		[array]$CommonParameters += [System.Management.Automation.PSCmdlet]::OptionalCommonParameters
@@ -76,10 +80,14 @@ Hashtable/$PSBoundParameters object, with defined parameters removed.
 
 			if (($_ -eq "additional") -or ($_ -eq "path") -or ($_ -eq "name")) {
 
-				#if the parameter name is "additional" or "path",
-				#format the array value:
-				#'["comma", "separated", "string", "enclosed", "in", "square", "brackets"]'
-				$Value = '["' + $($Parameters[$_] -join '","') + '"]'
+				if ($CommandOrigin -ne "Test-SYNOFSPermission") {
+
+					#if the parameter name is "additional" or "path",
+					#format the array value:
+					#'["comma", "separated", "string", "enclosed", "in", "square", "brackets"]'
+					$Value = '["' + $($Parameters[$_] -join '","') + '"]'
+
+				}
 
 			}
 

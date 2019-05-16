@@ -81,7 +81,8 @@
 		'Get-FSDirSize',
 		'Start-FSMD5',
 		'Stop-FSMD5',
-		'Get-FSMD5'
+		'Get-FSMD5',
+		'Test-FSPermission'
 	)
 
 	# AliasesToExport   = @()
