@@ -93,7 +93,11 @@
 		'Rename-FSItem',
 		'Start-FSCopy',
 		'Stop-FSCopy',
-		'Get-FSCopy'
+		'Get-FSCopy',
+		'Remove-FSItem',
+		'Start-FSDeleteItem',
+		'Stop-FSDeleteItem',
+		'Get-FSDeleteItem'
 		#'Save-FSFile'
 		#'Add-FSFile'
 	)
