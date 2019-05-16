@@ -90,7 +90,10 @@
 		'Get-FSSharingLinkInfo',
 		'Clear-FSSharingLink',
 		'New-FSFolder',
-		'Rename-FSItem'
+		'Rename-FSItem',
+		'Start-FSCopy',
+		'Stop-FSCopy',
+		'Get-FSCopy'
 		#'Save-FSFile'
 		#'Add-FSFile'
 	)
