@@ -1,6 +1,6 @@
 function New-FSFolder {
 
-	[CmdletBinding()]
+	[CmdletBinding(SupportsShouldProcess)]
 	param(
 
 		[parameter(
@@ -53,11 +53,15 @@ function New-FSFolder {
 		#Construct Request URI
 		$URI = $URL + $WebAPIPath + "$($Parameters | Get-Parameter)"
 
-		#Send Logon Request
-		$Response = Invoke-Request -Uri $URI -Method GET -WebSession $ThisSession
+		if ($PSCmdlet.ShouldProcess($($Parameters["api"]), "Invoke Method: '$($Parameters["method"])'")) {
 
-		If ($Response) {
-			$Response.folders
+			#Send Logon Request
+			$Response = Invoke-Request -Uri $URI -Method GET -WebSession $ThisSession
+
+			If ($Response) {
+				$Response.folders
+			}
+
 		}
 
 	}#process

@@ -1,6 +1,6 @@
 function Start-FSDeleteItem {
 
-	[CmdletBinding()]
+	[CmdletBinding(SupportsShouldProcess)]
 	param(
 
 		[parameter(
@@ -48,11 +48,15 @@ function Start-FSDeleteItem {
 		#Construct Request URI
 		$URI = $URL + $WebAPIPath + "$($Parameters | Get-Parameter)"
 
-		#Send Logon Request
-		$Response = Invoke-Request -Uri $URI -Method GET -WebSession $ThisSession
+		if ($PSCmdlet.ShouldProcess($($Parameters["api"]), "Invoke Method: '$($Parameters["method"])'")) {
 
-		If ($Response) {
-			$Response
+			#Send Logon Request
+			$Response = Invoke-Request -Uri $URI -Method GET -WebSession $ThisSession
+
+			If ($Response) {
+				$Response
+
+			}
 
 		}
 

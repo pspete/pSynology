@@ -1,6 +1,6 @@
 function Set-FSSharingLink {
 
-	[CmdletBinding()]
+	[CmdletBinding(SupportsShouldProcess)]
 	param(
 
 		[parameter(
@@ -47,7 +47,7 @@ function Set-FSSharingLink {
 	PROCESS {
 
 		$Parameters = $Parameters + $PSBoundParameters
-		## TODO ShouldProcess
+
 		foreach ($DateParameter in $DateParameters) {
 
 			if ($PSBoundParameters.ContainsKey("$DateParameter")) {
@@ -73,11 +73,15 @@ function Set-FSSharingLink {
 		#Construct Request URI
 		$URI = $URL + $WebAPIPath + "$($Parameters | Get-Parameter)"
 
-		#Send Logon Request
-		$Response = Invoke-Request -Uri $URI -Method GET -WebSession $ThisSession
+		if ($PSCmdlet.ShouldProcess($($Parameters["api"]), "Invoke Method: '$($Parameters["method"])'")) {
 
-		If ($Response) {
-			$Response
+			#Send Logon Request
+			$Response = Invoke-Request -Uri $URI -Method GET -WebSession $ThisSession
+
+			If ($Response) {
+				$Response
+			}
+
 		}
 
 	}#process

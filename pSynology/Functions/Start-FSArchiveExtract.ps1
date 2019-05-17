@@ -1,6 +1,6 @@
 function Start-FSArchiveExtract {
 
-	[CmdletBinding()]
+	[CmdletBinding(SupportsShouldProcess)]
 	param(
 
 		[parameter(
@@ -68,7 +68,7 @@ function Start-FSArchiveExtract {
 	PROCESS {
 
 		$Parameters = $Parameters + $PSBoundParameters
-		## TODO ShouldProcess
+
 		#deal with SecureString Password
 		If ($PSBoundParameters.ContainsKey("password")) {
 
@@ -80,11 +80,15 @@ function Start-FSArchiveExtract {
 		#Construct Request URI
 		$URI = $URL + $WebAPIPath + "$($Parameters | Get-Parameter)"
 
-		#Send Logon Request
-		$Response = Invoke-Request -Uri $URI -Method GET -WebSession $ThisSession
+		if ($PSCmdlet.ShouldProcess($($Parameters["api"]), "Invoke Method: '$($Parameters["method"])'")) {
 
-		If ($Response) {
-			$Response
+			#Send Logon Request
+			$Response = Invoke-Request -Uri $URI -Method GET -WebSession $ThisSession
+
+			If ($Response) {
+				$Response
+
+			}
 
 		}
 

@@ -1,6 +1,6 @@
 function Stop-FSArchiveCompress {
 
-	[CmdletBinding()]
+	[CmdletBinding(SupportsShouldProcess)]
 	param(
 
 		[parameter(
@@ -30,11 +30,15 @@ function Stop-FSArchiveCompress {
 		#Construct Request URI
 		$URI = $URL + $WebAPIPath + "$($Parameters | Get-Parameter)"
 
-		#Send Logon Request
-		$Response = Invoke-Request -Uri $URI -Method GET -WebSession $ThisSession
+		if ($PSCmdlet.ShouldProcess($($Parameters["api"]), "Invoke Method: '$($Parameters["method"])'")) {
 
-		If ($Response) {
-			$Response
+			#Send Logon Request
+			$Response = Invoke-Request -Uri $URI -Method GET -WebSession $ThisSession
+
+			If ($Response) {
+				$Response
+			}
+
 		}
 
 	}#process

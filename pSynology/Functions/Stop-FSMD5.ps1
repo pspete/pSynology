@@ -1,6 +1,6 @@
 function Stop-FSMD5 {
 
-	[CmdletBinding()]
+	[CmdletBinding(SupportsShouldProcess)]
 	param(
 
 		[parameter(
@@ -33,8 +33,12 @@ function Stop-FSMD5 {
 		#Send Logon Request
 		$Response = Invoke-Request -Uri $URI -Method GET -WebSession $ThisSession
 
-		If ($Response) {
-			$Response
+		if ($PSCmdlet.ShouldProcess($($Parameters["api"]), "Invoke Method: '$($Parameters["method"])'")) {
+
+			If ($Response) {
+				$Response
+			}
+
 		}
 
 	}#process
