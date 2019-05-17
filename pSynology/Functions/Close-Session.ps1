@@ -31,7 +31,7 @@ function Close-Session {
 
 		if ($PSCmdlet.ShouldProcess($($Parameters["api"]), "Logout $URL")) {
 
-			#Send Logon Request
+			#Send Request
 			$Session = Invoke-Request -Uri $URI -Method GET -WebSession $ThisSession
 
 			#If Logon Result

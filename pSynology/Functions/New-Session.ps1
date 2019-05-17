@@ -68,7 +68,7 @@ function New-Session {
 
 		if ($PSCmdlet.ShouldProcess($($Parameters["api"]), "Logon with User '$($Parameters["account"])'")) {
 
-			#Send Logon Request
+			#Send Request
 			$Response = Invoke-Request -Uri $URI -Method GET -SessionVariable $SessionVariable
 
 			If ($Response) {

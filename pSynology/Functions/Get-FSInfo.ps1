@@ -22,7 +22,7 @@ function Get-FSInfo {
 
 		Write-Verbose $URI
 
-		#Send Logon Request
+		#Send Request
 		$Response = Invoke-Request -Uri $URI -Method GET -WebSession $ThisSession
 
 		If ($Response) {

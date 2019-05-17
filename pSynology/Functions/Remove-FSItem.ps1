@@ -44,7 +44,7 @@ function Remove-FSItem {
 
 		if ($PSCmdlet.ShouldProcess($($Parameters["api"]), "Invoke Method: '$($Parameters["method"])'")) {
 
-			#Send Logon Request
+			#Send Request
 			$Response = Invoke-Request -Uri $URI -Method GET -WebSession $ThisSession
 
 			If ($Response) {

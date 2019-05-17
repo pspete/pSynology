@@ -63,7 +63,7 @@ function Add-FSFile {
 
 	PROCESS {
 
-		##TODO - multipart/form-data
+		## TODO - multipart/form-data
 		#? https://get-powershellblog.blogspot.com/2017/09/multipartform-data-support-for-invoke.html
 		$Parameters = $Parameters + $PSBoundParameters
 
@@ -81,7 +81,7 @@ function Add-FSFile {
 		#Construct Request URI
 		$URI = $URL + $WebAPIPath + "$($Parameters | Get-Parameter -ParametersToRemove filename)"
 
-		#Send Logon Request
+		#Send Request
 		$Response = Invoke-Request -Uri $URI -Method POST -WebSession $ThisSession
 
 		If ($Response) {

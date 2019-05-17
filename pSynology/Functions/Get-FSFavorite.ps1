@@ -49,7 +49,7 @@ function Get-FSFavorite {
 		#Construct Request URI
 		$URI = $URL + $WebAPIPath + "$($Parameters | Get-Parameter)"
 
-		#Send Logon Request
+		#Send Request
 		$Response = Invoke-Request -Uri $URI -Method GET -WebSession $ThisSession
 
 		If ($Response) {

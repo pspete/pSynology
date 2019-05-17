@@ -47,7 +47,7 @@ function Save-FSFile {
 		#Construct Request URI
 		$URI = $URL + $WebAPIPath + "$($Parameters | Get-Parameter -ParametersToRemove OutputPath)" + "&mode=%22download%22"
 
-		#Send Logon Request
+		#Send Request
 		$Response = Invoke-Request -Uri $URI -Method POST -WebSession $ThisSession
 
 		If ($Response) {
