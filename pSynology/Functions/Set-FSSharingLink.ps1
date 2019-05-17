@@ -13,6 +13,7 @@ function Set-FSSharingLink {
 			Mandatory = $true,
 			ValueFromPipeline = $false
 		)]
+		[ValidateScript( { $(($_ | ConvertTo-InsecureString).length) -le 16 })]
 		[securestring]$password,
 
 		[parameter(
@@ -39,15 +40,35 @@ function Set-FSSharingLink {
 
 		$WebAPIPath = "/webapi/entry.cgi?"
 
+		$DateParameters = @("date_expired", "date_available")
+
 	}#begin
 
 	PROCESS {
 
 		$Parameters = $Parameters + $PSBoundParameters
+		## TODO ShouldProcess
+		foreach ($DateParameter in $DateParameters) {
 
-		##TODO DateFormat YYY-MM-DD
-		##TODO SecureString Conversion
-		#? Password has 16 character limit
+			if ($PSBoundParameters.ContainsKey("$DateParameter")) {
+
+				#Convert DateParameter to string in Required format
+				$Date = (Get-Date $DateParameter -Format yyyy-MM-dd).ToString()
+
+				#Include date string in request
+				$Parameters["$DateParameter"] = $Date
+
+			}
+
+		}
+
+		#deal with SecureString Password
+		If ($PSBoundParameters.ContainsKey("password")) {
+
+			#Include decoded password in request
+			$Parameters["password"] = $(ConvertTo-InsecureString -SecureString $password)
+
+		}
 
 		#Construct Request URI
 		$URI = $URL + $WebAPIPath + "$($Parameters | Get-Parameter)"

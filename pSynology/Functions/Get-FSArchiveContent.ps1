@@ -71,7 +71,13 @@ function Get-FSArchiveContent {
 
 		$Parameters = $Parameters + $PSBoundParameters
 
-		## TODO - securestring Conversion
+		#deal with SecureString Password
+		If ($PSBoundParameters.ContainsKey("password")) {
+
+			#Include decoded password in request
+			$Parameters["password"] = $(ConvertTo-InsecureString -SecureString $password)
+
+		}
 
 		#Construct Request URI
 		$URI = $URL + $WebAPIPath + "$($Parameters | Get-Parameter)"

@@ -59,8 +59,14 @@ function Start-FSArchiveCompress {
 	PROCESS {
 
 		$Parameters = $Parameters + $PSBoundParameters
+		## TODO ShouldProcess
+		#deal with SecureString Password
+		If ($PSBoundParameters.ContainsKey("password")) {
 
-		## TODO - securestring Conversion
+			#Include decoded password in request
+			$Parameters["password"] = $(ConvertTo-InsecureString -SecureString $password)
+
+		}
 
 		#Construct Request URI
 		$URI = $URL + $WebAPIPath + "$($Parameters | Get-Parameter)"
