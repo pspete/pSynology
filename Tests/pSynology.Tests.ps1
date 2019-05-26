@@ -23,14 +23,14 @@ $ManifestPath = Join-Path "$ModulePath" "$ModuleName.psd1"
 Get-Module -Name $ModuleName -All | Remove-Module -Force -ErrorAction Ignore
 $Module = Import-Module -Name "$ManifestPath" -ArgumentList $true -Force -ErrorAction Stop -PassThru
 
-Describe "Module" {
+Describe "Module" -Tag "Consistency" {
 
 	Context "Module Consistency Tests" {
 
 		It "has a valid manifest" {
 
-			{$null = Test-ModuleManifest -Path $ManifestPath -ErrorAction Stop -WarningAction SilentlyContinue} |
-				Should Not Throw
+			{ $null = Test-ModuleManifest -Path $ManifestPath -ErrorAction Stop -WarningAction SilentlyContinue } |
+			Should Not Throw
 
 		}
 
@@ -48,7 +48,7 @@ Describe "Module" {
 
 		It "has a valid guid" {
 
-			$Module.Guid | Should Be '11c880d2-1430-4bd2-b6e8-f324741b460b'
+			$Module.Guid | Should Be '1d609375-f04e-465a-b3d5-38355a8767a7'
 
 		}
 
@@ -75,8 +75,8 @@ Describe "Module" {
 				#file contains valid format data
 				It "$_ is valid" {
 
-					{Update-FormatData -AppendPath $FormatFilePath -ErrorAction Stop -WarningAction SilentlyContinue} |
-						Should Not Throw
+					{ Update-FormatData -AppendPath $FormatFilePath -ErrorAction Stop -WarningAction SilentlyContinue } |
+					Should Not Throw
 
 				}
 
@@ -97,8 +97,8 @@ Describe "Module" {
 				#file contains valid type data
 				It "$_ is valid" {
 
-					{Update-TypeData -AppendPath $TypesFilePath -ErrorAction Stop -WarningAction SilentlyContinue} |
-						Should Not Throw
+					{ Update-TypeData -AppendPath $TypesFilePath -ErrorAction Stop -WarningAction SilentlyContinue } |
+					Should Not Throw
 
 				}
 
@@ -108,7 +108,7 @@ Describe "Module" {
 
 		#Get Public Function Names
 		$PublicFunctions = Get-ChildItem "$ModulePath\Functions" -Filter *.ps1 -Recurse |
-			Select-Object -ExpandProperty BaseName
+		Select-Object -ExpandProperty BaseName
 
 		Context "Exported Function Analysis" {
 
