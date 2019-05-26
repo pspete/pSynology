@@ -1,30 +1,28 @@
 @{
 
 	# Script module or binary module file associated with this manifest.
-	RootModule           = 'pSynology.psm1'
+	RootModule        = 'pSynology.psm1'
 
 	# Version number of this module.
-	ModuleVersion        = '0.0.1'
+	ModuleVersion     = '0.0.1'
 
 	# ID used to uniquely identify this module
-	GUID                 = '1d609375-f04e-465a-b3d5-38355a8767a7'
+	GUID              = '1d609375-f04e-465a-b3d5-38355a8767a7'
 
 	# Author of this module
-	Author               = 'Pete Maan'
+	Author            = 'Pete Maan'
 
 	# Company or vendor of this module
 	# CompanyName = ''
 
 	# Copyright statement for this module
-	Copyright            = '(c) 2019 Pete Maan. All rights reserved.'
+	Copyright         = '(c) 2019 Pete Maan. All rights reserved.'
 
 	# Description of the functionality provided by this module
-	Description          = 'Module for Synology API'
+	Description       = 'Module for Synology API'
 
 	# Minimum version of the Windows PowerShell engine required by this module
-	PowerShellVersion    = '5.0'
-
-	DefaultCommandPrefix = 'SYNO'
+	PowerShellVersion = '5.0'
 
 	# Name of the Windows PowerShell host required by this module
 	# PowerShellHostName = ''
@@ -57,64 +55,65 @@
 	# FormatsToProcess  = @()
 
 	# Functions to export from this module
-	FunctionsToExport    = @(
-		'New-Session',
-		'Close-Session',
-		'Get-FSInfo',
-		'Get-FSShare',
-		'Get-FSFile',
-		'Get-FSFileInfo',
-		'Start-FSSearch',
-		'Get-FSSearch',
-		'Stop-FSSearch',
-		'Remove-FSSearch',
-		'Get-FSVirtualFolder',
-		'Get-FSFavorite',
-		'Add-FSFavorite',
-		'Remove-FSFavorite',
-		'Clear-FSFavoriteStatus',
-		'Set-FSFavorite',
-		'Update-FSFavorite',
-		'Get-FSThumbnail',
-		'Start-FSDirSize',
-		'Stop-FSDirSize',
-		'Get-FSDirSize',
-		'Start-FSMD5',
-		'Stop-FSMD5',
-		'Get-FSMD5',
-		'Test-FSPermission',
-		'Set-FSSharingLink',
-		'Remove-FSSharingLink',
-		'Get-FSSharingLink',
-		'New-FSSharingLink',
-		'Get-FSSharingLinkInfo',
-		'Clear-FSSharingLink',
-		'New-FSFolder',
-		'Rename-FSItem',
-		'Start-FSCopy',
-		'Stop-FSCopy',
-		'Get-FSCopy',
-		'Remove-FSItem',
-		'Start-FSDeleteItem',
-		'Stop-FSDeleteItem',
-		'Get-FSDeleteItem',
-		'Start-FSArchiveExtract',
-		'Stop-FSArchiveExtract',
-		'Get-FSArchiveExtract',
-		'Get-FSArchiveContent',
-		'Start-FSArchiveCompress',
-		'Stop-FSArchiveCompress',
-		'Get-FSArchiveCompress',
-		'Clear-FSBackgroundTask',
-		'Get-FSBackgroundTask',
-		'Save-FSFile',
-		'Add-FSFile'
+	FunctionsToExport = @(
+		'New-SYNOSession',
+		'Close-SYNOSession',
+		'Get-SYNOFSInfo',
+		'Get-SYNOFSShare',
+		'Get-SYNOFSFile',
+		'Get-SYNOFSFileInfo',
+		'Start-SYNOFSSearch',
+		'Get-SYNOFSSearch',
+		'Stop-SYNOFSSearch',
+		'Remove-SYNOFSSearch',
+		'Get-SYNOFSVirtualFolder',
+		'Get-SYNOFSFavorite',
+		'Add-SYNOFSFavorite',
+		'Remove-SYNOFSFavorite',
+		'Clear-SYNOFSFavoriteStatus',
+		'Set-SYNOFSFavorite',
+		'Update-SYNOFSFavorite',
+		'Get-SYNOFSThumbnail',
+		'Start-SYNOFSDirSize',
+		'Stop-SYNOFSDirSize',
+		'Get-SYNOFSDirSize',
+		'Start-SYNOFSMD5',
+		'Stop-SYNOFSMD5',
+		'Get-SYNOFSMD5',
+		'Test-SYNOFSPermission',
+		'Set-SYNOFSSharingLink',
+		'Remove-SYNOFSSharingLink',
+		'Get-SYNOFSSharingLink',
+		'New-SYNOFSSharingLink',
+		'Get-SYNOFSSharingLinkInfo',
+		'Clear-SYNOFSSharingLink',
+		'New-SYNOFSFolder',
+		'Rename-SYNOFSItem',
+		'Start-SYNOFSCopy',
+		'Stop-SYNOFSCopy',
+		'Get-SYNOFSCopy',
+		'Remove-SYNOFSItem',
+		'Start-SYNOFSDeleteItem',
+		'Stop-SYNOFSDeleteItem',
+		'Get-SYNOFSDeleteItem',
+		'Start-SYNOFSArchiveExtract',
+		'Stop-SYNOFSArchiveExtract',
+		'Get-SYNOFSArchiveExtract',
+		'Get-SYNOFSArchiveContent',
+		'Start-SYNOFSArchiveCompress',
+		'Stop-SYNOFSArchiveCompress',
+		'Get-SYNOFSArchiveCompress',
+		'Clear-SYNOFSBackgroundTask',
+		'Get-SYNOFSBackgroundTask',
+		'Save-SYNOFSFile',
+		'Add-SYNOFSFile',
+		'Get-SYNOInfo'
 	)
 
 	# AliasesToExport   = @()
 
 	# Private data to pass to the module specified in RootModule/ModuleToProcess. This may also contain a PSData hashtable with additional module metadata used by PowerShell.
-	PrivateData          = @{
+	PrivateData       = @{
 
 		PSData = @{
 
