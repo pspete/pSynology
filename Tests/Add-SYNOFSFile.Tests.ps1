@@ -50,9 +50,9 @@ Describe $FunctionName {
 				}
 
 				$InputObj = [PSCustomObject]@{
-					"Path"  = "SomePath"
-					"Name"  = "SomeName"
-					"mtime" = $(Get-Date 1/1/2000)
+					"Path"     = "SomePath"
+					"filename" = "SomeName"
+					"mtime"    = $(Get-Date 1/1/2000)
 				}
 
 			}
