@@ -35,26 +35,26 @@
 
 		[parameter(
 			Mandatory = $true,
-			ValueFromPipeline = $true
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[string[]]$path,
 
 		[Parameter(
 			Mandatory = $false,
-			ValueFromPipeline = $false
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[ValidateScript( { $(($_ | ConvertTo-InsecureString).length) -le 16 })]
 		[securestring]$password,
 
 		[parameter(
 			Mandatory = $false,
-			ValueFromPipeline = $true
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[datetime]$date_expired,
 
 		[parameter(
 			Mandatory = $false,
-			ValueFromPipeline = $true
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[datetime]$date_available
 

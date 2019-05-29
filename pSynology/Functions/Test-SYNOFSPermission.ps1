@@ -37,25 +37,25 @@
 
 		[parameter(
 			Mandatory = $true,
-			ValueFromPipeline = $true
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[string]$path,
 
 		[parameter(
 			Mandatory = $true,
-			ValueFromPipeline = $true
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[string]$filename,
 
 		[parameter(
 			Mandatory = $false,
-			ValueFromPipeline = $true
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[boolean]$overwrite,
 
 		[parameter(
 			Mandatory = $false,
-			ValueFromPipeline = $true
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[boolean]$create_only
 

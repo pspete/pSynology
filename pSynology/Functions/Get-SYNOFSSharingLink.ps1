@@ -38,33 +38,33 @@
 
 		[parameter(
 			Mandatory = $false,
-			ValueFromPipeline = $true
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[int]$offset,
 
 		[parameter(
 			Mandatory = $false,
-			ValueFromPipeline = $true
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[int]$limit,
 
 		[Parameter(
 			Mandatory = $false,
-			ValueFromPipeline = $false
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[ValidateSet("id", "name", "isFolder", "path", "date_expired", "date_available", "status", "has_password", "url", "link_owner")]
 		[string]$sort_by,
 
 		[parameter(
 			Mandatory = $false,
-			ValueFromPipeline = $true
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[ValidateSet("asc", "desc")]
 		[string]$sort_direction,
 
 		[parameter(
 			Mandatory = $false,
-			ValueFromPipeline = $true
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[boolean]$force_clean
 

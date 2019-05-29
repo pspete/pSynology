@@ -71,92 +71,92 @@
 
 		[parameter(
 			Mandatory = $false,
-			ValueFromPipeline = $true
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[string]$folder_path,
 
 		[parameter(
 			Mandatory = $false,
-			ValueFromPipeline = $true
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[boolean]$recursive,
 
 		[Parameter(
 			Mandatory = $false,
-			ValueFromPipeline = $false
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[string]$pattern,
 
 		[parameter(
 			Mandatory = $false,
-			ValueFromPipeline = $true
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[string]$extension,
 
 		[parameter(
 			Mandatory = $false,
-			ValueFromPipeline = $true
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[ValidateSet("file", "dir", "all")]
 		[string]$filetype,
 
 		[parameter(
 			Mandatory = $false,
-			ValueFromPipeline = $true
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[int]$size_from,
 
 		[parameter(
 			Mandatory = $false,
-			ValueFromPipeline = $true
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[int]$size_to,
 
 		[parameter(
 			Mandatory = $false,
-			ValueFromPipeline = $true
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[datetime]$mtime_from,
 
 		[parameter(
 			Mandatory = $false,
-			ValueFromPipeline = $true
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[datetime]$mtime_to,
 
 		[parameter(
 			Mandatory = $false,
-			ValueFromPipeline = $true
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[datetime]$crtime_from,
 
 		[parameter(
 			Mandatory = $false,
-			ValueFromPipeline = $true
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[datetime]$crtime_to,
 
 		[parameter(
 			Mandatory = $false,
-			ValueFromPipeline = $true
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[datetime]$atime_from,
 
 		[parameter(
 			Mandatory = $false,
-			ValueFromPipeline = $true
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[datetime]$atime_to,
 
 		[parameter(
 			Mandatory = $false,
-			ValueFromPipeline = $true
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[string]$owner,
 
 		[parameter(
 			Mandatory = $false,
-			ValueFromPipeline = $true
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[string]$group
 	)

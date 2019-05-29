@@ -46,50 +46,50 @@
 
 		[parameter(
 			Mandatory = $true,
-			ValueFromPipeline = $true
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[string]$file_path,
 
 		[parameter(
 			Mandatory = $true,
-			ValueFromPipeline = $true
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[string]$dest_folder_path,
 
 		[parameter(
 			Mandatory = $false,
-			ValueFromPipeline = $true
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[boolean]$overwrite,
 
 		[parameter(
 			Mandatory = $false,
-			ValueFromPipeline = $true
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[boolean]$keep_dir,
 
 		[parameter(
 			Mandatory = $false,
-			ValueFromPipeline = $true
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[boolean]$create_subfolder,
 
 		[parameter(
 			Mandatory = $false,
-			ValueFromPipeline = $true
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[ValidateSet("enu", "cht", "chs", "krn", "ger", "fre", "ita", "spn", "jpn", "dan", "nor", "sve", "nld", "rus", "plk", "ptb", "ptg", "hun", "trk", "csy")]
 		[string]$codepage,
 
 		[parameter(
 			Mandatory = $false,
-			ValueFromPipeline = $true
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[securestring]$password,
 
 		[parameter(
 			Mandatory = $false,
-			ValueFromPipeline = $true
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[string]$item_id
 	)

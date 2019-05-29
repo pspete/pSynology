@@ -25,7 +25,7 @@
 
 		[parameter(
 			Mandatory = $true,
-			ValueFromPipeline = $true
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[string]$taskid
 	)

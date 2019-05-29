@@ -42,39 +42,39 @@
 
 		[parameter(
 			Mandatory = $true,
-			ValueFromPipeline = $true
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[ValidateNotNullOrEmpty()]
 		[PSCredential]$Credential,
 
 		[Parameter(
 			Mandatory = $false,
-			ValueFromPipeline = $false
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[string]$session,
 
 		[Parameter(
 			Mandatory = $false,
-			ValueFromPipeline = $false
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[ValidateSet("cookie", "sid")]
 		[string]$format,
 
 		[Parameter(
 			Mandatory = $false,
-			ValueFromPipeline = $false
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[int]$otp_code,
 
 		[parameter(
 			Mandatory = $false,
-			ValueFromPipeline = $false
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[string]$SessionVariable = "NewSession",
 
 		[parameter(
 			Mandatory = $true,
-			ValueFromPipeline = $false
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[string]$BaseURI
 	)

@@ -52,58 +52,58 @@
 
 		[parameter(
 			Mandatory = $true,
-			ValueFromPipeline = $true
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[string]$folder_path,
 
 		[parameter(
 			Mandatory = $false,
-			ValueFromPipeline = $true
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[int]$offset,
 
 		[parameter(
 			Mandatory = $false,
-			ValueFromPipeline = $true
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[int]$limit,
 
 		[Parameter(
 			Mandatory = $false,
-			ValueFromPipeline = $false
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[ValidateSet("name", "size", "user", "group", "mtime", "atime", "ctime", "crtime", "posix", "type")]
 		[string]$sort_by,
 
 		[parameter(
 			Mandatory = $false,
-			ValueFromPipeline = $true
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[ValidateSet("asc", "desc")]
 		[string]$sort_direction,
 
 		[parameter(
 			Mandatory = $false,
-			ValueFromPipeline = $true
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[string]$pattern,
 
 		[parameter(
 			Mandatory = $false,
-			ValueFromPipeline = $true
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[ValidateSet("file", "dir", "all")]
 		[string]$filetype,
 
 		[parameter(
 			Mandatory = $false,
-			ValueFromPipeline = $true
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[string]$goto_path,
 
 		[parameter(
 			Mandatory = $false,
-			ValueFromPipeline = $true
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[ValidateSet("real_path", "size", "owner", "time", "perm", "type" , "mount_point_type")]
 		[string[]]$additional

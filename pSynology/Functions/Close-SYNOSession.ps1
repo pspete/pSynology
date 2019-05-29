@@ -23,7 +23,7 @@
 
 		[Parameter(
 			Mandatory = $true,
-			ValueFromPipeline = $false
+			ValueFromPipelineByPropertyName = $true
 		)]
 		[string]$session
 	)
