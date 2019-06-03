@@ -7,7 +7,7 @@ environment:
   psgallery_key:
     secure: FuPgJskczZMptxRgdUlBAy7OYmXBQl4zq86kXXSmBt6wKudnM2PK7W6cM7bj0te1
   coveralls_key:
-    #secure: cWv4+OPfqRLSt7I4f+p3lEixKoYZzi42IDc7C4Kf+2WZW/dO+H+RBCM7m0Si2uuP
+    secure: HrG2t0IWCFEhLkG6gwZmmEYSr3vWCeF/F62FKTJcDWRS87go2QRxzWJuHG/Nb8pG
 
 skip_tags: true
 
