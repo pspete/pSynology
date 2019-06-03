@@ -16,14 +16,14 @@ Use PowerShell to issue Synology API commands.
 |-----------------------------|
 |[![tests][]][tests-site]     |
 
-[appveyor]:https://ci.appveyor.com/api/projects/status/pSynology/branch/master?svg=true
+[appveyor]:https://ci.appveyor.com/api/projects/status/c25mj2x08ox8lcy1/branch/master?svg=true
 [av-site]:https://ci.appveyor.com/project/pspete/pSynology/branch/master
 [coveralls]:https://coveralls.io/repos/github/pspete/pSynology/badge.svg
 [cv-site]:https://coveralls.io/github/pspete/pSynology
 [psgallery]:https://img.shields.io/powershellgallery/v/pSynology.svg
 [ps-site]:https://www.powershellgallery.com/packages/pSynology
 [license]:https://img.shields.io/github/license/pspete/pSynology.svg
-[license-link]:https://github.com/pspete/pSynology/blob/master/LICENSE.md
+[license-link]:https://github.com/pspete/pSynology/blob/master/LICENSE
 [tests]:https://img.shields.io/appveyor/tests/pspete/pSynology.svg
 [tests-site]:https://ci.appveyor.com/project/pspete/pSynology
 
@@ -40,7 +40,7 @@ To eventually develop & publish PowerShell functions for all DSM 6.x API endpoin
 
 ## List Of Commands
 
-### SYNO.API
+### **SYNO.API**
 
 | Function                   | Description                                                                                 |
 |----------------------------|---------------------------------------------------------------------------------------------|
@@ -48,7 +48,7 @@ To eventually develop & publish PowerShell functions for all DSM 6.x API endpoin
 | Close-SYNOSession          | Logoff from an API session                                                                  |
 | Get-SYNOInfo               | Get DiskStation API information                                                             |
 
-### SYNO.FileStation
+### **SYNO.FileStation**
 
 | Function                   | Description                                                                                 |
 |----------------------------|---------------------------------------------------------------------------------------------|
